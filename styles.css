@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: var(--dark-blue);
+  min-height: 100vh;
+  padding-inline: 1.6rem;
+}
+
+.container {
+  display: grid;
+  grid: max-content 3.2rem / 1fr;
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  max-width: 54rem;
+}
+
+.advice-output {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background: var(--dark-grayish-blue);
+  padding: 4rem 2.4rem 6.4rem;
+  gap: 2.4rem;
+  border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 545px) {
+  .advice-output {
+    padding: 4.8rem 4.8rem 7.2rem;
+  }
+}
+
+.advice-number {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.345714rem;
+  color: var(--neon-green);
+}
+
+@media screen and (min-width: 450px) {
+  .advice-number {
+    letter-spacing: 0.408571rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+
+.quote {
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: -0.0257143rem;
+  color: var(--light-cyan);
+}
+
+@media screen and (min-width: 450px) {
+  .quote {
+    margin-bottom: 1.6rem;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+picture > img {
+  margin: auto;
+  width: 100%;
+}
+
+.divider {
+  display: flex;
+  width: 100%;
+}
+
+.btn {
+  display: grid;
+  place-self: end center;
+  place-items: center;
+  width: 6rem;
+  height: 6rem;
+  background: var(--neon-green);
+  border-radius: 50%;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  transition: box-shadow 250ms;
+  cursor: pointer;
+}
+
+.btn:is(:hover) {
+  box-shadow: 0px 0px 30px var(--neon-green);
+}
+
+.btn-img {
+  transition: transform 300ms;
+}
+.btn:is(:hover) > img {
+  transform: rotate(360deg);
+}
